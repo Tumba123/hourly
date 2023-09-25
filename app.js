@@ -13,7 +13,7 @@ function login() {
       // Hide the login form and show the content
       document.getElementById('loginDialog').style.display = 'none';
       document.getElementById('content').style.display = 'block';
-      document.getElementById('info-bx').style.display = 'block';
+      document.getElementById('header-box').style.display = 'block';
     } else {
       alert("Invalid username or password. Please try again.");
     }
