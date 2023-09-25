@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page in HTML with CSS Code Example</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="box-form" id="loginDialog">
+	<div class="left">
+		<div class="overlay">
+		<h1>Herzlich willkommen</h1>
+		<p class="welcome-text1">Willkommen auf Sergejs persönlicher Webseite zur Arbeitszeiterfassung!</p>
+		<p class="welcome-text2">Benutzen Sie unbedingt den Benutzernamen und das Passwort, das er Ihnen gegeben hat!</p>
+		</div>
+	</div>
+	
+	
+		<div class="right">
+		<h5>Login</h5>
+		<p>Passwort vergessen? <a href="mailto:mail@sergejkulpinac.dev">E-Mail senden</a> es dauert weniger als eine Minute</p>
+		<div class="inputs">
+			<input type="text" placeholder="user name">
+			<br>
+			<input type="password" placeholder="password">
+		</div>
+			
+			<br><br>
+			<br>
+			<button class="login-btn" onclick="login()">Login</button>
+	</div>
+</div>
+			<div class="mover"></div>
+			<div class="container" id="content">
+				<h1>Sergejs Arbeitsstunden</h1>
+				<p>Meine derzeitigen und voraussichtlichen Arbeitsstunden</p>
+				<iframe class="googlesheet" width="100%" height="385px" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS7chDkaQwnjEg_PTo3uQAPY0xaQF5DWu5BorwKGpXBpkUz6rSirnUD6g0BWZYTWWJtSy-Jfc9bSk5V/pubhtml?widget=true&amp;headers=false"></iframe>
+				<button onclick="downloadFile()" class="download-btn" ><i class="fa fa-download"></i> Download</button>
+			</div>
+<script src="app.js"></script>
+</body>
+</html>
