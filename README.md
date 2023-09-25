@@ -1,0 +1,2 @@
+# hourly
+Prototype worktime tracker
