@@ -183,19 +183,12 @@ label input[type="checkbox"] {
 }
 
 .container {
-  max-width: 650px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 20px;
   display: none; /* Initially hide the container */
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
-  background-color: rgba(255, 255, 255, .15);  
-  backdrop-filter: blur(15px);
-  color: white;
-  caret-color: transparent;
-  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .welcome-text1{
@@ -255,4 +248,82 @@ label input[type="checkbox"] {
   color: white;
   caret-color: transparent;
   margin-bottom: 15px;
+}
+
+.leftbox, .rightbox {
+  width: 100%; /* Each box takes 50% of the container width */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(15px);
+  color: white;
+  caret-color: transparent;
+  margin-bottom: 20px;
+}
+
+.space {
+  width: 35px; /* Adjust the space width as needed */
+}
+
+.pep-warning {
+z-index: 100;
+color: white;
+background-color: white;
+border-radius: 20px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+background-color: rgba(18, 17, 17, 0.504);  
+backdrop-filter: blur(15px);
+}
+
+.pep-warning::backdrop {
+  background-color: rgba(18, 17, 17, 0.504); 
+  backdrop-filter: blur(15px);
+}
+
+.pep-warning-btn {
+  color: #ffffff;
+  font-size: 16px;
+  padding: 12px 35px;
+  border-radius: 50px;
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  box-shadow: 0px 4px 20px 0px #49c628a6;
+  transition: 0.3s;
+  background-color: rgb(228, 103, 0);
+}
+
+.pep-warning-btn:hover {
+  background-color: #00a900;
+  box-shadow: 0px 4px 50px 0px #37ff00c8;
+}
+
+#warning-sign {
+  font-size: 45px;
+  color: red;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+  }
+  100% {
+    box-shadow: 0 0 0 13px rgba(255, 255, 255, 0.052);
+    backdrop-filter: blur(30px);
+  }
+}
+
+.pulse {
+  animation: pulse-animation 2s infinite;
+}
+
+.circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  background-color: darkred;
 }

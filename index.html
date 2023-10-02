@@ -2,46 +2,72 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>StundenBuch 1.0</title>
+  <title>StundenBuch 2.0</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
+<!-- Login -->
 <div class="box-form" id="loginDialog">
-	<div class="left">
-		<div class="overlay">
-		<h1>Herzlich willkommen</h1>
-		<p class="welcome-text1">Willkommen auf Sergejs persönlicher Webseite zur Arbeitszeiterfassung!</p>
-		<p class="welcome-text2">Benutzen Sie unbedingt den Benutzernamen und das Passwort, das er Ihnen gegeben hat!</p>
-		</div>
-	</div>
-	
-	
-		<div class="right">
-		<h5>Login</h5>
-		<p>Passwort vergessen? <a href="mailto:mail@sergejkulpinac.dev">E-Mail senden</a> es dauert weniger als eine Minute</p>
-		<div class="inputs">
-			<input type="text" placeholder="user name">
-			<br>
-			<input type="password" placeholder="password">
-		</div>
-			
-			<br><br>
-			<br>
-			<button class="login-btn" onclick="login()">Login</button>
-	</div>
-</div>
-		<div class="header" id="header-box">
-			<h1>StundenBuch v1.0</h1>
-		</div>
-			<div class="container" id="content">
-				<h1>Sergejs Arbeitsstunden</h1>
-				<p>Meine derzeitigen und voraussichtlichen Arbeitsstunden</p>
-				<iframe class="googlesheet" width="100%" height="385px" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS7chDkaQwnjEg_PTo3uQAPY0xaQF5DWu5BorwKGpXBpkUz6rSirnUD6g0BWZYTWWJtSy-Jfc9bSk5V/pubhtml?widget=true&amp;headers=false"></iframe>
-				<button onclick="downloadFile()" class="download-btn" ><i class="fa fa-download"></i> Download</button>
+
+			<div class="left">
+				<div class="overlay">
+				<h1>Herzlich willkommen</h1>
+				<p class="welcome-text1">Willkommen auf Sergejs persönlicher Webseite zur Arbeitszeiterfassung!</p>
+				<p class="welcome-text2">Benutzen Sie unbedingt den Benutzernamen und das Passwort, das er Ihnen gegeben hat!</p>
+				</div>
 			</div>
+	
+	
+			<div class="right">
+				<h5>Login</h5>
+				<p>Passwort vergessen? <a href="mailto:mail@sergejkulpinac.dev">E-Mail senden</a> es dauert weniger als eine Minute</p>
+				<div class="inputs">
+					<input type="text" placeholder="user name">
+					<br>
+					<input type="password" placeholder="password">
+				</div>
+
+					<br><br>
+					<br>
+					<button class="login-btn" onclick="login()"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+				</div>
+			</div>
+
+		<!-- Content -->
+		<div class="header" id="header-box">
+			<h1>StundenBuch v2.0</h1>
+			</div>
+				<div class="container" id="content">
+
+					<dialog class="pep-warning" id="pep-warning-diag">
+						<i class="fa fa-exclamation-circle pulse circle" id="warning-sign" aria-hidden="true"></i>
+							<p>Warnung vor der "PEP 2.0"-Datei!<p>
+							<p>Ich empfehle dringend, diese Datei wegen der Einschränkungen beim Einbetten anzusehen/herunterzuladen.</p>
+						<form method="dialog">
+							<button class="pep-warning-btn pulse">OK</button>
+						</form>
+					</dialog>
+
+					<div class="leftbox">
+						<h1>Sergejs Arbeitsstunden</h1>
+						<p>Meine derzeitigen und voraussichtlichen Arbeitsstunden</p>
+						<iframe class="googlesheet" width="100%" height="385px" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS7chDkaQwnjEg_PTo3uQAPY0xaQF5DWu5BorwKGpXBpkUz6rSirnUD6g0BWZYTWWJtSy-Jfc9bSk5V/pubhtml?widget=true&amp;headers=false"></iframe>
+						<button onclick="downloadFile()" class="download-btn" ><i class="fa fa-eye" aria-hidden="true"></i> View / Download</button>
+					</div>
+						<div class="space"></div>
+					<div class="rightbox" id="trigger-dialog">
+						<h1>PEP 2.0</h1>
+						<p>Personaleinsatzplanung für die absehbare Zukunft.</p>
+						<iframe class="googlesheet" width="100%" height="385px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRPhldKYKQapHp1typSiqZrN0vVu0pqCuGF76YPIVz8hRdNjqpCNkD4tvdjL7p-yQ/pubhtml?gid=1627758305&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+						<button onclick="downloadPEP()" class="download-btn" ><i class="fa fa-eye" aria-hidden="true"></i> View / Download</button>
+					</div>
+				</div>
+			</div>
+		</div>
 <script src="app.js"></script>
 </body>
 </html>
+
+<!--  -->
